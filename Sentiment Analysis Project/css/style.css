@@ -1,0 +1,167 @@
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 800px;
+  resize: none;
+  overflow-y: hidden;
+
+  /* optional CSS */
+  border: 0;
+  outline: 0;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #343434;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+  background-image: linear-gradient(271deg, #2196F3, #9C27B0);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.centered {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Archivo Black', sans-serif;
+  margin-bottom: 25px;
+}
+
+/* /optional CSS */
+
+
+
+@media (orientation: portrait) {
+  textarea {
+    width: 350px !important;
+  }
+
+  h1 {
+    font-size: 20px !important;
+  }
+}
+
+
+/* button */
+
+
+
+button {
+  display: inline-block;
+  border: 0;
+  padding: 1.5rem 2.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.clay-btn {
+  background: #212121;
+  border-radius: 15px;
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 12px rgba(0, 0, 0, 0.2),
+    inset 8px 8px 12px rgba(255, 255, 255, 0.4);
+}
+
+.clay-btn:hover {
+  background: #000;
+}
+
+.clay-btn:active {
+  animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+#button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* outline: 1px solid #b4c1df; */
+  transition: var(--transition);
+  overflow: hidden;
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  border: 2px solid #b4c1df;
+  outline-offset: -19px;
+}
+
+#text {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: var(--transition);
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: var(--transition);
+}
+
+#button:hover {
+  outline-offset: 50px;
+  outline-color: #b4c1df;
+
+  #text {
+    letter-spacing: 3px;
+  }
+
+  #image {
+    transform: rotate(-10deg);
+  }
+}
